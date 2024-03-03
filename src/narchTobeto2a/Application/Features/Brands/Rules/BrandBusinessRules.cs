@@ -18,7 +18,6 @@ public class BrandBusinessRules : BaseBusinessRules
         _brandRepository = brandRepository;
     }
 
-
     public async Task CarShouldNotExistsWithSameName(string name)
     {
         Brand? brandWithSameName = await _brandRepository.GetAsync(b => b.Name == name);
